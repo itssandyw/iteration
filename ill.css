@@ -1,0 +1,50 @@
+html, body{
+	margin: auto;
+	width: auto;
+	height: auto;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.picture-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content:center;
+}
+@keyframes hover {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+img{
+	width:450px; 
+	height:450px;
+	padding: 10px;
+	animation-name: hover;
+	animation-duration: 1.5s;
+	animation-fill-mode: backwards;
+	animation-play-state: paused;  
+}
+img:active,
+img:focus,
+img:hover {
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
